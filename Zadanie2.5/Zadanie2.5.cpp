@@ -2,19 +2,69 @@
 //
 
 #include <iostream>
+#include <cmath>
+#include <iomanip>
+
+float roundFunction(float number, int n)
+{
+    float num = 0;
+
+    int a = 0;
+    a = pow(10, n);
+    num = round(number * a) / a; // num = 12454/1000 = 12.453
+    return num;
+}
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    double numberF = 12.4543645;
+    float number = 12.4543645;
+    int n = 0;
+    n = 2;
+    std::cout << std::setprecision(10) << numberF << std::endl;
+    std::cout << std::setprecision(10) << number << std::endl;
+
+    //tutaj testowanie dla roznego n
+    std::cout << std::setprecision(10) << roundFunction(number, 1) << std::endl;
+    std::cout << std::setprecision(10) << roundFunction(number, 2) << std::endl;
+    std::cout << std::setprecision(10) << roundFunction(number, 3) << std::endl;
+    std::cout << std::setprecision(10) << roundFunction(number, 4) << std::endl;
+    std::cout << std::setprecision(10) << roundFunction(number, 5) << std::endl;
+
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
+// modify floatfield
+//#include <iostream>     // std::cout, std::fixed, std::scientific
+//
+//int main() {
+//	double a = 3.1415926534;
+//	double b = 2006.0;
+//	double c = 101.1;
+//
+//	float d = 3.1415926534;
+//	float e = 2006.0;
+//	float f = 101.1;
+//
+//	int n = 0;
+//
+//	std::cout << "Podaj precyzje z jaka maja wystepowac zaokraglenia: " << std::endl;
+//	std::cin >> n;
+//
+//	std::cout.precision(n);
+//
+//	std::cout << "default:\n";
+//	std::cout << a << '\n' << b << '\n' << c << '\n' << d << '\n' << e << '\n' << f << '\n';
+//
+//	std::cout << '\n';
+//
+//	std::cout << "fixed:\n" << std::fixed;
+//	std::cout << a << '\n' << b << '\n' << c << '\n' << d << '\n' << e << '\n' << f << '\n';
+//
+//	std::cout << '\n';
+//
+//	std::cout << "scientific:\n" << std::scientific;
+//	std::cout << a << '\n' << b << '\n' << c << '\n' << d << '\n' << e << '\n' << f << '\n';
+//
+//}
