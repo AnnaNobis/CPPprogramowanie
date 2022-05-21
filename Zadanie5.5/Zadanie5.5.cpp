@@ -56,7 +56,7 @@ void drawFigureD(int l) // rysowanie iksa *
 	{
 			for (int j = 0; j < l; j++) 
 			{
-				if (j == i || j == l - i-1)
+				if (j == i || j == l - i-1) // dostawiamy -1 bo indeksujemy do wartosci wymiar(dlugosc) -1
 				{
 					std::cout << '*';
 				}
@@ -72,9 +72,9 @@ void drawFigureD(int l) // rysowanie iksa *
 }
 
 
-
 int main()
 {
+
 	drawFigureA(10);
 	std::cout << std::endl;
 drawFigureB(10);
